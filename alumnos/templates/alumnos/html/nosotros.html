@@ -22,8 +22,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Tu CSS -->
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/nosotros.css">
+    <link rel="stylesheet" href="{% url 'index' %}../css/index.css ">
+    <link rel="stylesheet" href="{% url 'nosotros' %}../css/nosotros.css">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌟</text></svg>">
@@ -33,7 +33,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="../index.html">
+            <a class="navbar-brand fw-bold" href="{% url 'index' %}">
                 <i class="fas fa-star-of-life me-2"></i>Portal Talentos
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -42,17 +42,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">
+                        <a class="nav-link" href="{% url 'index' %}">
                             <i class="fas fa-home me-1"></i>Inicio
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="nosotros.html">
+                        <a class="nav-link active" href="{% url 'nosotros' %}">
                             <i class="fas fa-users me-1"></i>Nosotros
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html" target="_blank">
+                        <a class="nav-link" href="{% url 'contacto' %}" target="_blank">
                             <i class="fas fa-envelope me-1"></i>Contacto
                         </a>
                     </li>
@@ -363,7 +363,7 @@
             <div class="cta-card text-center" data-aos="fade-up">
                 <h2 class="display-5 fw-bold mb-3">¿Tienes un talento que compartir?</h2>
                 <p class="lead mb-4">Únete a nuestra comunidad y descubre oportunidades únicas para desarrollar tus habilidades.</p>
-                <a href="contacto.html" target="_blank" class="btn btn-cta btn-lg">
+                <a href="{% url 'contacto' %}" target="_blank" class="btn btn-cta btn-lg">
                     <i class="fas fa-star me-2"></i>Registra tu talento ahora
                 </a>
             </div>
