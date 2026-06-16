@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,8 +24,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- CSS Personalizados -->
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/ficha-personal.css">
+     <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ficha-personal.css' %}">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎹</text></svg>">
@@ -33,7 +35,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="../index.html">
+            <a class="navbar-brand fw-bold" href="{% url 'index' %}">
                 <i class="fas fa-star-of-life me-2"></i>Portal Talentos
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -42,17 +44,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">
+                        <a class="nav-link" href="{% url 'index' %}">
                             <i class="fas fa-home me-1"></i>Inicio
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../html/nosotros.html">
+                        <a class="nav-link" href="{% url 'nosotros' %}">
                             <i class="fas fa-users me-1"></i>Nosotros
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../html/contacto.html">
+                        <a class="nav-link" href="{% url 'contacto' %}">
                             <i class="fas fa-envelope me-1"></i>Contacto
                         </a>
                     </li>
@@ -95,7 +97,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-4 text-center mb-4 mb-md-0">
                                 <div class="profile-image-container">
-                                    <img src="../img/musica/talentos/piano-debora.jpeg" alt="Sofía Ramírez" class="profile-image">
+                                    <img src="{% static 'img/musica/talentos/piano-debora.jpeg' %}" alt="Sofía Ramírez" class="profile-image">
                                     <div class="profile-badge">
                                         <i class="fas fa-crown"></i> Talento Destacado
                                     </div>
@@ -165,7 +167,7 @@
                                 <h4>Pikachu</h4>
                                 <p class="pokemon-type type-psychic">Eléctrico / Normal</p>
                                 <p class="pokemon-desc">Levanta su cola para vigilar los alrededores. A veces, puede ser alcanzado por un rayo en esa pose..</p>
-                                <button class="pokemon-info-btn" onclick="obtenerPokemonInfo('meloetta')">
+                                <button class="pokemon-info-btn" onclick="obtenerPokemonInfo('pikachu')">
                                     <i class="fas fa-info-circle"></i> Ver más
                                 </button>
                             </div>
@@ -242,7 +244,7 @@
             <!-- Botón Volver -->
             <div class="row justify-content-center mt-4">
                 <div class="col-lg-10 text-center">
-                    <a href="../html/musica.html" class="btn-back-home">
+                    <a href="{% url 'musica' %}" class="btn-back-home">
                         <i class="fas fa-arrow-left me-2"></i>Volver a Música
                     </a>
                 </div>

@@ -10,3 +10,9 @@ def contacto(request):
     return render(request, 'alumnos/html/contacto.html')
 def musica(request):
     return render(request, 'alumnos/html/musica.html')
+def piano(request):
+    return render(request, 'alumnos/html/piano.html')
+def tec(request):
+    return render(request, 'alumnos/html/tec.html')
+def tec(request):
+    return render(request, 'alumnos/html/juanin.html')
