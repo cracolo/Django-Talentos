@@ -14,5 +14,5 @@ def piano(request):
     return render(request, 'alumnos/html/piano.html')
 def tec(request):
     return render(request, 'alumnos/html/tec.html')
-def tec(request):
+def juanin(request):
     return render(request, 'alumnos/html/juanin.html')
