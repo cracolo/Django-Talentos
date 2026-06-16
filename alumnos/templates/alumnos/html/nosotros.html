@@ -23,7 +23,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Tu CSS -->
-    <link rel="stylesheet" href="{% static 'css/index.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
     <link rel="stylesheet" href="{% static 'css/nosotros.css' %}">
     
     <!-- Favicon -->
@@ -34,7 +34,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="{% url 'index' %}">
+            <a class="navbar-brand fw-bold" href="/">
                 <i class="fas fa-star-of-life me-2"></i>Portal Talentos
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -43,23 +43,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'index' %}">
-                            <i class="fas fa-home me-1"></i>Inicio
-                        </a>
+                        <a class="nav-link active" href="{% url 'index' %}">
+                            <i class="fas fa-home me-1"></i>Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="{% url 'nosotros' %}">
-                            <i class="fas fa-users me-1"></i>Nosotros
-                        </a>
+                        <a class="nav-link" href="{% url 'nosotros' %}">
+                            <i class="fas fa-users me-1"></i>Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contacto' %}" target="_blank">
-                            <i class="fas fa-envelope me-1"></i>Contacto
-                        </a>
+                        <a class="nav-link" href="{% url 'contacto' %}">
+                            <i class="fas fa-envelope me-1"></i>Contacto</a>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div>  
     </nav>
 
     <!-- Hero Section -->
